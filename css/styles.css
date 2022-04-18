@@ -1,0 +1,86 @@
+
+*{
+    box-sizing: border-box;
+}
+body {
+position: relative;
+background: rgb(236, 235, 235);
+padding: 2em;
+} 
+
+/*
+overlay styling 
+*/
+.overlay{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(100, 100, 100, 0.4);
+}
+
+.modal{
+    width: 375px;
+    margin: 15% auto auto;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    border: 1px solid #778;
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+.modal-close{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+/*
+employee card 
+*/
+
+.grid-container,
+.card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    margin: 1rem;
+   padding: 15px 20px;
+   width: 400px;
+   background: #fff;
+   border: 1px solid black;
+   height:160px;
+   border-radius: 5px;
+}
+
+.pfp{
+    margin-top: 1rem;
+    width: 100px;
+    height: 100px;
+}
+
+.text-content{
+    text-align: center;
+    margin:  auto 1em;
+    text-align: justify;
+}
+
+.email,
+.address{
+    margin: 5px 5px;
+}
+
+.name{
+    margin-bottom: 5px;
+}
