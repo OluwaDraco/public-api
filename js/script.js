@@ -64,8 +64,10 @@ function displayModal(index){
             </div>
     
     `;
+overlay.classList.remove("hidden");
 modal.innerHTML = modalHTML;
 }
+
 
 
 
