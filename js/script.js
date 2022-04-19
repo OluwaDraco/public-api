@@ -2,7 +2,7 @@ let employees = [];
 const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob &noinfo &nat=US`
 const grindContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".grid-container");
-const  modal= document.querySelector(".modal");
+const  modal= document.querySelector(".modal-content");
 const  modalClose= document.querySelector(".modal-close");
 
 
@@ -40,7 +40,32 @@ function displayEmployees(employeeData){
 
 }
 
-function displayModal({index,name,picture,email,location,dob,phone})
+function displayModal(index){
+    let {name:{first,last},picture,email,location:{city, street,state,postcode},
+    dob,phone} = employees[index];
+
+    let date = new Date(dob.date);
+
+    const modalHTML =
+    `
+    <div class="modal">
+                    <img class="pfp" src="${picture.large}" alt="avater" />
+                    <div class="text-content">
+                        <h2 class="name">${first} ${last}</h2>
+                        <p class="email">${email}</p>
+                        
+
+                        <hr />
+                        <p>${phone}</p>
+                        <p class="address">${street}, ${city}, ${state},${postcode}</p>
+                        <p>Birthday: ${date.getMont()}/${date.getDay()}/${date.getFullYear()}</p>
+                    </div>
+                </div>
+            </div>
+    
+    `;
+modal.innerHTML = modalHTML;
+}
 
 
 
