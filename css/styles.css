@@ -7,7 +7,13 @@ position: relative;
 background: rgb(236, 235, 235);
 padding: 2em;
 } 
-
+h2,h1{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    padding-left: 1em;
+    
+}
 /*
 overlay styling 
 */
@@ -17,10 +23,11 @@ overlay styling
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(100, 100, 100, 0.4);
+    background: rgba(48, 48, 48, 0.8);
 }
 
 .modal{
+    display: flex;
     width: 375px;
     margin: 15% auto auto;
     text-align: center;
@@ -36,10 +43,27 @@ overlay styling
     right: 15px;
     top: 5px;
     cursor: pointer;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+}
+.modal-close:hover{
+    background-color: red;
 }
 
 .hidden{
     display: none;
+}
+hr{
+    margin: 2em;
+}
+
+.modal-content .text-content{
+    text-align: center;
+    color: rgb(121, 121, 121);
+}
+.modal-content .text-content h2{
+    color: black;
 }
 
 /*
@@ -59,16 +83,24 @@ employee card
    padding: 15px 20px;
    width: 400px;
    background: #fff;
-   border: 1px solid black;
+   border-top: 1px solid rgb(178, 178, 178);
+   border-left: 1px solid rgb(178, 178, 178);
+   border-right: 1px solid rgb(178, 178, 178);
+   border-bottom: 4px solid rgb(178, 178, 178);
+   
    height:160px;
    border-radius: 5px;
+}
+.card:hover{
+    border-color: rgb(142, 210, 240);
+    transition: all .5s;
 }
 
 .pfp{
     margin-top: 1rem;
     width: 100px;
     height: 100px;
-    border-radius: 4%;
+    border-radius: 40%;
 }
 
 .text-content{
@@ -85,3 +117,4 @@ employee card
 .name{
     margin-bottom: 5px;
 }
+
